@@ -44,6 +44,8 @@ $bookflow 帮我做一期《书名》的抖音图书视频。先核对版本和�
 
 Skill 会按仓库约定引导阶段并生成/检查 episode 文件。图像、配音和视频合成要使用当前环境实际可用的工具；缺少工具或授权时会停在相应步骤，不会假称已经自动完成。
 
+可选的读书笔记、图片生成、Whisper/ASR、HyperFrames 或 CapCut 等工具如何接入，以及哪些能力并不包含在仓库中，见 [可选工具接入说明](docs/integrations.md)。
+
 ### 从书到成片
 
 1. **选书与版本**：记下准确书名、作者、译者、出版社、版次/ISBN；封面和版本不确定就先不做商品镜头。
@@ -64,6 +66,7 @@ npm run bookflow -- check episodes/my-first-book --release
 ## 工作流细节
 
 - [Codex Skill 入口](skills/bookflow/SKILL.md)
+- [可选工具接入说明](docs/integrations.md)
 - [完整制作与审稿流程](docs/workflow.md)
 - [项目文件和字段格式](docs/project-format.md)
 - [协作者/AI 工作约定](AGENTS.md)
