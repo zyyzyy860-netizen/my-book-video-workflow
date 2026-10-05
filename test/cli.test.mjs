@@ -3,6 +3,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import test from "node:test";
+import { fileURLToPath } from "node:url";
 import { checkEpisode, exportSrt, initEpisode, parseCsv, srtTimestamp } from "../src/cli.mjs";
 
 function csvRow(values) {
@@ -112,4 +113,12 @@ test("SRT export preserves Chinese and optional English captions", () => {
   } finally {
     fs.rmSync(episode.parent, { recursive: true, force: true });
   }
+});
+
+test("published Atomic Habits example stays valid", () => {
+  const exampleDir = fileURLToPath(new URL("../examples/atomic-habits/", import.meta.url));
+  const result = checkEpisode(exampleDir);
+  assert.equal(result.ok, true, result.issues.join("\n"));
+  assert.equal(result.sceneCount, 4);
+  assert.equal(result.durationSeconds, 36);
 });

@@ -1,0 +1,14 @@
+{
+  "bookTitle": "Atomic Habits",
+  "author": "James Clear",
+  "edition": "English edition, ISBN 9780735211292",
+  "audience": "想把好习惯落实到日常、但常常半途而废的读者",
+  "platform": "Douyin",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "targetSeconds": 36,
+  "scriptStatus": "draft"
+}

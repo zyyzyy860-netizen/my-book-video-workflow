@@ -23,6 +23,17 @@ npm run bookflow -- status episodes/my-first-book
 npm run bookflow -- export-srt episodes/my-first-book
 ```
 
+### 先跑一遍公开示例
+
+仓库附带了一个不含书封、音频或第三方视频素材的示例项目。它用《Atomic Habits》演示书目信息、来源、口播、分镜和中英字幕怎样对应；示例脚本仍标记为 `draft`，不代表作者本人读过，也不能直接当成商品广告发布。
+
+```powershell
+npm run bookflow -- check examples/atomic-habits
+npm run bookflow -- export-srt examples/atomic-habits
+```
+
+第二条命令会在示例目录生成 `captions.srt`。你可以打开 CSV 和 SRT 看字段如何配合，再运行 `init` 创建自己的项目。这个示例只覆盖到内容规划和字幕导出；录音、素材、剪辑和成片仍须自己完成并审核。
+
 ### 从书到成片
 
 1. **选书与版本**：记下准确书名、作者、译者、出版社、版次/ISBN；封面和版本不确定就先不做商品镜头。

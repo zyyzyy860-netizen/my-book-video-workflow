@@ -1,0 +1,3 @@
+claim_id,claim_text,source_id,source_title,source_url,checked_by,status
+"CL01","书名为 Atomic Habits，作者为 James Clear，示例采用 ISBN 9780735211292","SRC01","Atomic Habits — Penguin Random House","https://www.penguinrandomhouse.com/books/543993/atomic-habits-by-james-clear/","Bookflow example","verified"
+"CL02","出版社介绍将微小行为和习惯系统作为本书主题","SRC01","Atomic Habits — Penguin Random House","https://www.penguinrandomhouse.com/books/543993/atomic-habits-by-james-clear/","Bookflow example","verified"
