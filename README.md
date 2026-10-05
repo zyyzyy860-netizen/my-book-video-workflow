@@ -2,7 +2,7 @@
 
 [![Quality checks](https://github.com/zyyzyy860-netizen/my-book-video-workflow/actions/workflows/quality.yml/badge.svg?branch=main)](https://github.com/zyyzyy860-netizen/my-book-video-workflow/actions/workflows/quality.yml)
 
-一个面向创作者的开源图书短视频工作流：从选书、核验事实、写原创口播和分镜，到字幕、素材权利记录、成片检查。它不会把“输入书名”包装成一键出广告；关键内容由创作者确认，过程可复查。
+一个面向创作者的开源图书短视频工作流：仓库提供 Codex 工作流 Skill、每期文件模板和本地校验 CLI。Codex 可按阶段协助选书调研、原创口播、分镜和制作；CLI 负责结构/对应关系校验与 SRT 导出。它本身不生成图片、配音或视频，关键内容由创作者确认，过程可复查。
 
 ## 5 分钟跑起来
 
@@ -34,6 +34,16 @@ npm run bookflow -- export-srt examples/atomic-habits
 
 第二条命令会在示例目录生成 `captions.srt`。你可以打开 CSV 和 SRT 看字段如何配合，再运行 `init` 创建自己的项目。这个示例只覆盖到内容规划和字幕导出；录音、素材、剪辑和成片仍须自己完成并审核。
 
+### 在 Codex 里用自然语言跑完整流程
+
+将仓库中的 `skills/bookflow/` 文件夹复制到 Codex 的技能目录：Windows 通常是 `%USERPROFILE%\.codex\skills\bookflow`，macOS/Linux 通常是 `~/.codex/skills/bookflow`。若同名目录已存在，先检查并手动合并，不要直接覆盖。重启 Codex 后可以这样开始：
+
+```text
+$bookflow 帮我做一期《书名》的抖音图书视频。先核对版本和来源，逐阶段带我做；口播和分镜分别等我确认后再继续。
+```
+
+Skill 会按仓库约定引导阶段并生成/检查 episode 文件。图像、配音和视频合成要使用当前环境实际可用的工具；缺少工具或授权时会停在相应步骤，不会假称已经自动完成。
+
 ### 从书到成片
 
 1. **选书与版本**：记下准确书名、作者、译者、出版社、版次/ISBN；封面和版本不确定就先不做商品镜头。
@@ -53,6 +63,7 @@ npm run bookflow -- check episodes/my-first-book --release
 
 ## 工作流细节
 
+- [Codex Skill 入口](skills/bookflow/SKILL.md)
 - [完整制作与审稿流程](docs/workflow.md)
 - [项目文件和字段格式](docs/project-format.md)
 - [协作者/AI 工作约定](AGENTS.md)
