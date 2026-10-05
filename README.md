@@ -1,5 +1,7 @@
 # Bookflow Studio
 
+[![Quality checks](https://github.com/zyyzyy860-netizen/my-book-video-workflow/actions/workflows/quality.yml/badge.svg?branch=main)](https://github.com/zyyzyy860-netizen/my-book-video-workflow/actions/workflows/quality.yml)
+
 一个面向创作者的开源图书短视频工作流：从选书、核验事实、写原创口播和分镜，到字幕、素材权利记录、成片检查。它不会把“输入书名”包装成一键出广告；关键内容由创作者确认，过程可复查。
 
 ## 5 分钟跑起来
